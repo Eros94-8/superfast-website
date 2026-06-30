@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SuperFast API — Ultra‑Fast Prime Checking Engine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            font-family: Inter, Arial, sans-serif;
+            background: #0d0d0d;
+            color: #eaeaea;
+        }
+        header {
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #111;
+            border-bottom: 1px solid #222;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #4cc9f0;
+        }
+        nav a {
+            margin-left: 20px;
+            color: #eaeaea;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .hero {
+            padding: 120px 40px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 20px;
+            color: #4cc9f0;
+        }
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: auto;
+            opacity: 0.8;
+        }
+        .cta {
+            margin-top: 40px;
+        }
+        .cta a {
+            padding: 14px 28px;
+            background: #4cc9f0;
+            color: #000;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .section {
+            padding: 80px 40px;
+            max-width: 900px;
+            margin: auto;
+        }
+        .section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #4cc9f0;
+        }
+        .card {
+            background: #111;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #222;
+            margin-bottom: 20px;
+        }
+        pre {
+            background: #000;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            border: 1px solid #222;
+        }
+        footer {
+            padding: 40px;
+            text-align: center;
+            opacity: 0.6;
+            font-size: 14px;
+        }
+        footer a {
+            color: #4cc9f0;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">SuperFast API</div>
+    <nav>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#api">API</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Ultra‑Fast Prime Checking API</h1>
+    <p>The fastest prime‑checking engine available online. Powered by a custom C++ core and delivered through a modern, secure API.</p>
+    <div class="cta">
+        <a href="https://your-stripe-checkout-link">Subscribe Now</a>
+    </div>
+</section>
+
+<section id="features" class="section">
+    <h2>Features</h2>
+    <div class="card">
+        <h3>⚡ Extreme Performance</h3>
+        <p>Custom C++ engine optimized for high‑speed prime checking.</p>
+    </div>
+    <div class="card">
+        <h3>🔐 Secure API Keys</h3>
+        <p>Each user receives a unique API key with daily usage limits.</p>
+    </div>
+    <div class="card">
+        <h3>📈 Scalable</h3>
+        <p>Starter and Pro plans with increased daily limits.</p>
+    </div>
+</section>
+
+<section id="pricing" class="section">
+    <h2>Pricing</h2>
+    <div class="card">
+        <h3>Starter — Free</h3>
+        <p>100 requests/day</p>
+    </div>
+    <div class="card">
+        <h3>Pro — €4.99/month</h3>
+        <p>10,000 requests/day</p>
+    </div>
+</section>
+
+<section id="api" class="section">
+    <h2>API Reference</h2>
+
+    <div class="card">
+        <h3>POST /prime/pro</h3>
+        <p>Check if a number is prime.</p>
+        <pre>
+curl -X POST "https://superfast-api.onrender.com/prime/pro" \
+  -H "x-api-key: YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"n": 999999937}'
+        </pre>
+    </div>
+
+    <div class="card">
+        <h3>GET /usage</h3>
+        <p>Check your daily usage and plan.</p>
+        <pre>
+curl -X GET "https://superfast-api.onrender.com/usage" \
+  -H "x-api-key: YOUR_API_KEY"
+        </pre>
+    </div>
+</section>
+
+<footer>
+    SuperFast API — Powered by C++ and FastAPI  
+    <br><br>
+    <a href="/terms.html">Terms of Service</a> |
+    <a href="/privacy.html">Privacy Policy</a>
+</footer>
+
+</body>
+</html>
