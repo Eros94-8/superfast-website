@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SuperFast API — Playground</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { margin: 0; font-family: Inter, Arial, sans-serif; background: #0d0d0d; color: #eaeaea; }
+        header { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; background: #111; border-bottom: 1px solid #222; }
+        .logo { font-size: 24px; font-weight: 700; color: #4cc9f0; }
+        nav a { margin-left: 20px; color: #eaeaea; text-decoration: none; font-size: 16px; }
+        .container { max-width: 900px; margin: auto; padding: 40px; }
+        h1 { color: #4cc9f0; font-size: 42px; }
+        textarea { width: 100%; height: 200px; background: #111; color: #eaeaea; border: 1px solid #222; border-radius: 10px; padding: 10px; }
+        button { padding: 14px 28px; background: #4cc9f0; color: #000; border-radius: 8px; font-weight: 600; font-size: 18px; border: none; cursor: pointer; margin-top: 20px; }
+        #output { margin-top: 40px; background: #000; padding: 20px; border-radius: 10px; border: 1px solid #222; white-space: pre-wrap; }
+        footer { padding: 40px; text-align: center; opacity: 0.6; font-size: 14px; }
+        footer a { color: #4cc9f0; text-decoration: none; margin: 0 10px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">SuperFast API</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="try.html">Try it Now</a>
+        <a href="docs.html">Docs</a>
+        <a href="playground.html">Playground</a>
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h1>API Playground</h1>
+    <p>Write any request and test the API in real time.</p>
+
+    <textarea id="requestBox">
+{
+  "endpoint": "/prime/pro",
+  "method": "POST",
+  "api_key": "YOUR_API_KEY",
+  "body": { "n": 999999937 }
+}
+    </textarea>
+
+    <button onclick="runRequest()">Run Request</button>
+
+    <div id="output"></div>
+</div>
+
+<footer>
+    SuperFast API — Powered by C++ and FastAPI  
+    <br><br>
+    <a href="terms.html">Terms of Service</a> |
+    <a href="privacy.html">Privacy Policy</a>
+</footer>
+
+<script>
+async function runRequest() {
+    const box = document.getElementById("requestBox").value;
+    const output = document.getElementById("output");
+
+    try {
+        const req = JSON.parse(box);
+
+        const response = await fetch("https://superfast-api.onrender.com" + req.endpoint, {
+            method: req.method,
+            headers: {
+                "Content-Type": "application/json",
+                "x-api-key": req.api_key
+            },
+            body: req.method === "POST" ? JSON.stringify(req.body) : null
+        });
+
+        const data = await response.json();
+        output.innerText = JSON.stringify(data, null, 2);
+
+    } catch (err) {
+        output.innerText = "Invalid request format.";
+    }
+}
+</script>
+
+</body>
+</html>
