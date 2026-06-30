@@ -1,0 +1,143 @@
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    background: #050505;
+    color: #eaeaea;
+}
+
+/* ===== HEADER ===== */
+header {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0a0a0a;
+    border-bottom: 1px solid #111;
+    box-shadow: 0 0 20px rgba(0,255,255,0.1);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #00eaff;
+    text-shadow: 0 0 10px #00eaff;
+}
+
+nav a {
+    margin-left: 20px;
+    color: #eaeaea;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00eaff;
+    text-shadow: 0 0 10px #00eaff;
+}
+
+/* ===== HERO ===== */
+.hero {
+    padding: 120px 40px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+    color: #00eaff;
+    text-shadow: 0 0 20px #00eaff;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: auto;
+    opacity: 0.8;
+}
+
+/* ===== BUTTONS ===== */
+button, .cta a {
+    padding: 14px 28px;
+    background: #00eaff;
+    color: #000;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover, .cta a:hover {
+    background: #00bcd4;
+    box-shadow: 0 0 20px #00eaff;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+    padding: 80px 40px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #00eaff;
+    text-shadow: 0 0 10px #00eaff;
+}
+
+.card {
+    background: #0a0a0a;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #111;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(0,255,255,0.05);
+}
+
+/* ===== INPUTS ===== */
+input, textarea {
+    width: 80%;
+    padding: 14px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 20px;
+    background: #0a0a0a;
+    color: #eaeaea;
+    border: 1px solid #111;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #00eaff;
+    box-shadow: 0 0 10px #00eaff;
+}
+
+/* ===== PRE ===== */
+pre {
+    background: #000;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-x: auto;
+    border: 1px solid #111;
+    box-shadow: 0 0 15px rgba(0,255,255,0.05);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    padding: 40px;
+    text-align: center;
+    opacity: 0.6;
+    font-size: 14px;
+}
+
+footer a {
+    color: #00eaff;
+    text-decoration: none;
+    margin: 0 10px;
+}
