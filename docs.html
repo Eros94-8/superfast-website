@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SuperFast API — Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { margin: 0; font-family: Inter, Arial, sans-serif; background: #0d0d0d; color: #eaeaea; }
+        header { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; background: #111; border-bottom: 1px solid #222; }
+        .logo { font-size: 24px; font-weight: 700; color: #4cc9f0; }
+        nav a { margin-left: 20px; color: #eaeaea; text-decoration: none; font-size: 16px; }
+        .container { max-width: 900px; margin: auto; padding: 40px; }
+        h1 { color: #4cc9f0; font-size: 42px; }
+        h2 { color: #4cc9f0; margin-top: 40px; }
+        pre { background: #000; padding: 20px; border-radius: 10px; border: 1px solid #222; overflow-x: auto; }
+        footer { padding: 40px; text-align: center; opacity: 0.6; font-size: 14px; }
+        footer a { color: #4cc9f0; text-decoration: none; margin: 0 10px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">SuperFast API</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="try.html">Try it Now</a>
+        <a href="docs.html">Docs</a>
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h1>SuperFast API Documentation</h1>
+    <p>Welcome to the official documentation for the SuperFast Prime Checking API.</p>
+
+    <h2>Base URL</h2>
+    <pre>https://superfast-api.onrender.com</pre>
+
+    <h2>Authentication</h2>
+    <p>All requests require your API key:</p>
+    <pre>x-api-key: YOUR_API_KEY</pre>
+
+    <h2>POST /prime/pro</h2>
+    <p>Check if a number is prime.</p>
+    <pre>
+curl -X POST "https://superfast-api.onrender.com/prime/pro" \
+  -H "x-api-key: YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"n": 999999937}'
+    </pre>
+
+    <h2>GET /usage</h2>
+    <p>Check your daily usage.</p>
+    <pre>
+curl -X GET "https://superfast-api.onrender.com/usage" \
+  -H "x-api-key: YOUR_API_KEY"
+    </pre>
+
+    <h2>Error Responses</h2>
+    <pre>
+{ "error": "Invalid API key" }
+{ "error": "Daily limit exceeded" }
+{ "error": "Missing parameter n" }
+    </pre>
+</div>
+
+<footer>
+    SuperFast API — Powered by C++ and FastAPI  
+    <br><br>
+    <a href="terms.html">Terms of Service</a> |
+    <a href="privacy.html">Privacy Policy</a>
+</footer>
+
+</body>
+</html>
